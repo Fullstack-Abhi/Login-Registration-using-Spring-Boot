@@ -1,0 +1,48 @@
+/* Animated Gradient Background */
+.animated-bg {
+    background: linear-gradient(-45deg, #0d0d0d, #1a1a40, #001f3f, #0d6efd);
+    background-size: 400% 400%;
+    animation: gradientFlow 15s ease infinite;
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Glowing title text */
+.text-glow {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow:
+        0 0 5px #00bfff,
+        0 0 10px #00bfff,
+        0 0 20px #00bfff;
+    animation: fadeInText 1.2s ease-in-out;
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Styled form box (glassmorphism look) */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0, 123, 255, 0.3);
+}
+
+/* Button glow on hover */
+.custom-btn {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+.custom-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #0d6efd, 0 0 35px rgba(0, 123, 255, 0.5);
+}
